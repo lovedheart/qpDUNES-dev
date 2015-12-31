@@ -55,7 +55,7 @@ if ( ispc == 0 )
 %  	CPPFLAGS  = [ IFLAGS, OMPFLAGS, '-largeArrayDims -D__cpluplus -D__MATLAB__ -cxx -O -D__NO_COPYRIGHT__ -DLINUX CFLAGS=''$CFLAGS -std=c99 -fPIC''', ' ' ]; %% -D__SUPPRESSANYOUTPUT__
 	CPPFLAGS  = [ IFLAGS, '-largeArrayDims -D__DEBUG__ -D__cplusplus -D__MATLAB__ -cxx -O -D__NO_COPYRIGHT__ -DLINUX CFLAGS=''$CFLAGS -fPIC -std=c99''', ' ' ]; %% -D__DEBUG__ -D__SUPPRESSANYOUTPUT__
 else
-	CPPFLAGS  = [ IFLAGS, '-largeArrayDims -D__cplusplus -D__MATLAB__ -cxx -O -DWIN32', ' ' ]; %% -D__NO_COPYRIGHT__ -D__SUPPRESSANYOUTPUT__
+	CPPFLAGS  = [ IFLAGS, '-largeArrayDims -D__cplusplus -D__MATLAB__ -cxx -O -DWIN32 -D__NO_COPYRIGHT__', ' ' ]; %% -D__NO_COPYRIGHT__ -D__SUPPRESSANYOUTPUT__
 end
 
 QPDUNES_OBJECTS = [	QPDUNESPATH, 'src/stage_qp_solver_clipping.c ',...
