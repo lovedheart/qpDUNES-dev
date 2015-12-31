@@ -181,10 +181,13 @@ void initXUStyle( int nrhs, const mxArray* const prhs[] )
 	nU = (uint_t) mxGetN( Bptr );	/* get number of columns */
 	nZ = nX+nU;
 
+	/* TODO: deal with affine constraints! */
 	for ( uint_t ii=0; ii<nI; ++ii ) {
-		nD[ii] = nZ;
+		/* 		nD[ii] = nZ; */
+		nD[ii] = 0;
 	}
-	nD[nI] = nX;
+	/* 	nD[nI] = nX;	*/
+	nD[nI] = 0;
 
 
 	/* 4) check dimension consistency */
